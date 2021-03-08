@@ -11,25 +11,6 @@ let tipsBtn = document.querySelector(".tipBtn");
 let closeBtn = document.querySelector(".closeBtn");
 let overlay = document.getElementById("overlay")
 
-
-//delete todo 
-function deleteTodo() {
-  for (let span of spans) {
-    span.addEventListener("click", function () {
-      span.parentElement.remove();
-      event.stopPropagation();
-    });
-  }
-}
-
-//load todo
-function loadTodo() {
-  if (localStorage.getItem('todoList')) {
-    ul.innerHTML = localStorage.getItem('todoList');
-    deleteTodo();
-  }
-}
-
 //add new todo
 input.addEventListener("keypress", function (keyPressed) {
   if (keyPressed.which === 13) {
@@ -51,13 +32,31 @@ input.addEventListener("keypress", function (keyPressed) {
 
 });
 
+//load todo
+function loadTodo() {
+  if (localStorage.getItem('todoList')) {
+    ul.innerHTML = localStorage.getItem('todoList');
+    deleteTodo();
+  }
+}
+
 //highline list
 ul.addEventListener('click', function (ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
-}, false
+}
 );
+
+//delete todo 
+function deleteTodo() {
+  for (let span of spans) {
+    span.addEventListener("click", function () {
+      span.parentElement.remove();
+      event.stopPropagation();
+    });
+  }
+}
 
 //hide input box
 pencil.addEventListener('click', function () {
