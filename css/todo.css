@@ -80,7 +80,7 @@ button:hover {
     background:white;
     position:relative;
 }
-#overlay{
+/* #overlay{
     height: 0;
     width: 100%;
     position: fixed; 
@@ -92,8 +92,8 @@ button:hover {
     overflow-x: hidden; 
     transition: 0.5s; 
     
-}
-#overlay .closebtn {
+} */
+/* #overlay .closebtn {
     position: absolute;
     top: 15px;
     right: 40px;
@@ -107,7 +107,7 @@ button:hover {
     font-size: 30px;
     color: #818181;
     display: block;
-}
+} */
 .todos{
     list-style-type: none;
     margin: 0;

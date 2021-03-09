@@ -77,17 +77,17 @@ clearBtn.addEventListener('click', function () {
   localStorage.removeItem('todoList', ul.innerHTML);
 });
 
-//display overlay 
-tipsBtn.addEventListener("click", function () {
-  overlay.style.height = "100%";
-});
+// //display overlay 
+// tipsBtn.addEventListener("click", function () {
+//   overlay.style.height = "100%";
+// });
 
-//close overlay 
-closeBtn.addEventListener("click", function (e) {
-  e.preventDefault;
-  overlay.style.height = "0";
+// //close overlay 
+// closeBtn.addEventListener("click", function (e) {
+//   e.preventDefault;
+//   overlay.style.height = "0";
 
-})
+// })
 
 //delete todo
 deleteTodo();
